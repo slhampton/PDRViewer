@@ -1,0 +1,21 @@
+﻿@using System.Runtime.InteropServices.ComTypes
+@{
+    Layout = "_Layout";
+}
+
+<table class="table table-striped">
+    
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Votes</th>
+    </tr>
+    @foreach (var pdr in ViewBag.PdrList)
+    {
+        <tr>
+            <td>@pdr.Id</td>
+            <td>@Html.ActionLink((string)pdr.Title, "Detail", new {id = pdr.Id})</td>
+            <td>@pdr.Votes</td>
+        </tr>
+    }
+</table>

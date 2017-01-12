@@ -1,0 +1,13 @@
+﻿@using PDRViewer.Models
+@{
+    Layout = "_Layout";
+}
+
+<h3>@ViewBag.Pdr.Id</h3>
+<h4>Votes: @ViewBag.Pdr.Votes</h4>
+<button>@Html.ActionLink("Vote", "Vote", new { id = ViewBag.Pdr.Id, votes = ViewBag.Pdr.Votes })</button>
+<hr/>
+<h2>@ViewBag.Pdr.Title</h2>
+<br/>
+<p>@ViewBag.Pdr.Description</p>
+
